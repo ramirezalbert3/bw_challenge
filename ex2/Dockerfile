@@ -9,8 +9,7 @@ RUN pip3 install --upgrade pip \
 # but we should assign a password
 RUN adduser -D serveradmin
 
-COPY server.py /srv/server.py
-RUN chown serveradmin:serveradmin /srv/server.py
+COPY --chown=serveradmin:serveradmin server.py password_check.py /srv/
 
 USER serveradmin
 

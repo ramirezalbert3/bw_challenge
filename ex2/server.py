@@ -23,6 +23,5 @@ def password_check():
     
     return str(str_len and has_numbers and has_caps)
 
-# If we're running in stand alone mode, run the application
 if __name__ == '__main__':
-    app.run(port=5002)
+    app.run(host='0.0.0.0', port=5002)
